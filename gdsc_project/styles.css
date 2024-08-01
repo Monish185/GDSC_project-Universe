@@ -40,91 +40,138 @@ body {
 /* Navbar styling */
 .navbar2 {
     display: flex;
-    justify-content: space-around;
-    align-items: center; /* Align items vertically centered */
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-}
-
-.logo {
+    padding: 0 20px;
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     margin-right: 10px;
-}
-
-#navbar-brand {
+  }
+  
+  #navbar-brand {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 900;
-    font-style: normal;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
-    gap: 40px;
-}
-
-.nav-links a {
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-links a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 0.75rem;
-}
-
-.nav-links a:hover {
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
     color: #29e6bd;
     text-decoration: double;
-}
-
-/* Dropdown styles */
-.dropbtn {
+  }
+  
+  /* Dropdown styles */
+  .dropbtn {
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
-
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
-
-.dropdown-content a {
+  }
+  
+  .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-.dropdown-content a:hover {
+  }
+  
+  .dropdown-content a:hover {
     background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.nav-text {
+  }
+  
+  .nav-text {
     display: flex;
     align-items: center;
-}
-
-.nav-text p {
+  }
+  
+  .nav-text p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 24px;
     color: white;
-}
+  }
+  
+  /* Mobile menu button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    background-color: white;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .nav-links2 {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links2.show {
+      display: flex;
+    }
+  }
+  
 
 .hero-content {
     display: flex;
@@ -209,6 +256,140 @@ body {
 
 .hero-uranus{ left: 21%; top: 50%; width: 5rem; height: auto; }
 
+@media screen and (min-width: 1440px){
+    .hero-jupiter { top: 59.6%; right: 0%; width:22rem; height: auto; }
+
+    .hero-mercury { top: 7%; left: 0%; width: 8rem; height: auto; }
+
+    .hero-saturn { top: 30%; left: 0%; width: 15rem; height: auto; }
+
+    .hero-neptune { top: 83.6%; left: 0%; width: 8rem; height: auto; }
+
+    .hero-venus { right: 0%; top: 9%; width: 14rem; height: auto; }
+
+    .hero-earth { top: 20%; left: 52%; width: 7.5rem; height: auto; transform: translate(-50%, -50%);z-index: 0; }
+
+    .hero-moon { left: 44%; bottom: 0%; width: 15%; height: auto; }
+
+    .hero-uranus{ left: 27%; top: 50%; width: 5rem; height: auto; }
+
+    #learn-more {
+        padding: 1.5rem 2rem;
+        width: 14rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 1rem;
+    }
+
+    .middle-box h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .hero-jupiter { top: 66%; right: 0%; width:25%; height: auto; }
+
+    .hero-saturn { top: 30%; left: 0%; width: 18%; height: auto; }
+
+    .hero-venus { right: 0%; top: 10%; width: 16%; height: auto; }
+
+    .hero-neptune { top: 84.5%; left: 0%; width: 10%; height: auto; }
+
+    .hero-uranus{ left: 24%; top: 45%; width: 9%; height: auto; }
+
+    .hero-moon { left: 43%; bottom: 0%; width: 15%; height: auto; }
+
+    .earth-card{
+        width: 4rem;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .hero-saturn { top: 35%; left: 0%; width: 15%; height: auto; }
+
+    .hero-moon { left: 43%; bottom: 0%; width: 11%; height: auto; }
+
+    .hero-jupiter { top: 68.5%; right: 0%; width:23%; height: auto; }
+
+    .hero-venus { right: 0%; top: 10%; width: 14%; height: auto; }
+
+    .hero-mercury { top: 7%; left: 0%; width: 10%; height: auto; }
+
+    .hero-earth { top: 20%; left: 52%; width: 12%; height: auto; transform: translate(-50%, -50%);z-index: 0; }
+
+    #learn-more {
+        padding: 1.5rem 2rem;
+        width: 11rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 0.8rem;
+    }
+
+    .middle-box h1 {
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+
+    .middle-box{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .middle-box{
+        width: 15rem;
+    }
+
+    .middle-box h1 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .middle-box p {
+        max-width: 60rem; /* Limit the width of the paragraph */
+        font-size: 0.6rem;
+    }
+
+    #learn-more {
+        padding: 1rem 1rem;
+        width: 9rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    #learn-more a {
+        font-size: 0.8rem;
+    }
+
+    .hero-jupiter { top: 82.5%; right: 0%; width:23%; height: auto; }
+
+    .hero-neptune { top: 89%; left: 0%; width: 13%; height: auto; }
+
+    .hero-mercury { top: 9%; left: 0%; width: 10%; height: auto; }
+
+    #navbar-brand{
+        font-size: large;
+    }
+}
 .sun {
     height:max-content;
     width: 100vw;
@@ -247,7 +428,7 @@ body {
 }
 
 .sun-card2 h5{
-    text-align:justify;
+    text-align:center;
     margin-left: 3.9rem;
 }
 
@@ -270,16 +451,18 @@ body {
     margin-bottom: 2rem;
     margin-right: 2rem;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0.5rem;
 }
 
-
+.sun-card1 h2{
+    margin-left: 2rem;
+}
 
 .suncards h2{
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 .suncard1img{
@@ -287,6 +470,52 @@ body {
 }
 .suncard2img{
     margin-left: 2.5rem;
+}
+
+@media screen and (max-width:768px){
+    .sun p{
+        font-size: 0.8rem;
+    }
+
+    .sun h2{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sun-card1,.sun-card2{
+        height: 6rem;
+        width: 16rem;
+    }
+
+    #sun-card1-img{
+        width: 180%;
+        height: auto;
+        margin-right: 2rem;
+    }
+    #sun-card2-img{
+        width: 150%;
+        height: auto;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width:426px){
+    .suncards{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+    #sun-card1-img{
+        width: 70%;
+        height: auto;
+        margin-right: 1rem;
+    }
+    #sun-card2-img{
+        width: 150%;
+        height: auto;
+        margin-right: 1rem;
+    }
 }
 
 .mercury{
@@ -381,6 +610,13 @@ body {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr;
         place-items: center;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #merc_img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -480,6 +716,13 @@ body {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #venus-img{
+        width: 120%;
+        height: auto;
     }
 }
 
@@ -598,6 +841,60 @@ body {
     z-index: 6;
 }
 
+@media screen and (max-width: 1024px) {
+    .earth-upper{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    #earthimg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:426px){
+    .earth-upper{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 3rem;
+    }
+
+    .earth-card{
+        margin-top: 2rem;
+        width: 13rem;
+        height: 6rem;
+    }
+
+    .earth-card h2{
+        font-size: large;
+    }
+
+    .earth-card img{
+        width: 80%;
+    }
+
+    .moon-text{
+        width: 30rem;
+    }
+
+    .moon-text p{
+        font-size: 0.6rem;
+    }
+
+    #rocket{
+        display: none;
+    }
+    #arrow{
+        width: 130%;
+    }
+
+    .moon{
+        width: 70vw;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
 .mars{
     margin-top: 3rem;
     display: grid;
@@ -673,6 +970,58 @@ body {
     margin: 1rem;
 }
 
+@media screen and (max-width: 1024px){
+    .mars{
+        grid-template-columns: 60% 40%;
+    }
+
+    #mars-img{
+        width: 70%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .mars-card1,.mars-card2,.mars-card3{
+        width: 14rem;
+        height: 6rem;
+    }
+
+    #mars-card1-img{
+        width: 80%;
+    }
+
+    #mars-card2-img,#mars-card3-img{
+        width: 90%;
+    }
+
+    .mars h5{
+        font-size: 0.6rem;
+    }
+
+    .mars h2{
+        font-size: 1.2rem;
+    }
+
+    .mars-moon-text{
+       top: 16%;
+       left: 58%;
+       text-align: start;
+       /* background-color: green; */
+   }
+}
+
+@media screen and (max-width:426px){
+    .mars{
+        grid-template-columns: 100%;
+    }
+
+    .mars-cards{
+        justify-items: center;
+    }
+}
+
 .jupiter{
     margin-top: 3rem;
     display: grid;
@@ -738,6 +1087,23 @@ body {
     font-size: x-large;
 }
 
+@media screen and (max-width:768px){
+    #jupiter-image{ 
+        width:150%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:426px){
+    .jupiter{
+        grid-template-columns: 1fr;
+    }
+
+    #jupiter-image{
+        width: 100%;
+    }
+}
+
 .saturn{
     margin-top: 3rem;
     display: grid;
@@ -788,6 +1154,36 @@ body {
     font-size: 3rem;
     font-weight: 900;
     text-align: end;
+}
+
+@media screen and (max-width:768px) {
+    .saturn-card1,.saturn-card2{
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width:426px) {
+
+    .saturn{
+        grid-template-columns: 1fr;
+    }
+
+    #saturn-image{
+        width: 80%;
+    }
+
+    .saturn h1{
+        text-align: start;
+    }
+
+    .saturn-cards{
+        justify-items: center;
+    }
+
+    .saturn-content{
+        display: grid;
+        justify-items: center;
+    }
 }
 
 .uranus {
@@ -853,6 +1249,19 @@ body {
     object-fit: contain;
 }
 
+@media screen and (max-width: 768px) {
+    .uranus-cards{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
+
+@media screen and (max-width:426px){
+    .uranus-content{
+        grid-template-columns: 1fr;
+    }
+}
+
 .neptune{
     margin-top: 3rem;
     display: grid;
@@ -908,6 +1317,7 @@ body {
 #nept-lower{
     width: 94.5%;
 }
+
 .footer-div{
     display: flex;
     justify-content: center;
@@ -948,7 +1358,8 @@ body {
     width: 50%;
     margin-top: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* justify-self: center; */
+    /* justify-self: center;
+    align-self: flex-start; */
 }
 
 .email-input{
@@ -990,4 +1401,16 @@ body {
     width: 100%;
     margin-top: 4rem;
 }
+
+@media screen and (max-width: 768px) {
+    #footer-p{
+        display: none;
+    }
+
+    #merc{
+        display: none;
+    }
+}
+
+
 
